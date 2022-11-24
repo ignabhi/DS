@@ -67,3 +67,41 @@ col = ["x", "y"]
 df = df.sort_values(col, ascending=[False, True])
 print ("\n\nAfter sorting column ", col, "\n\nDataFrame is:")
 print(df)
+
+
+8. Given a dataframe with custom indexing,   convert and it to default    indexing and display it.
+import pandas as pd
+
+
+data = {'Name':['Jai', 'Princi', 'Gaurav', 'Anuj', 'Geeku'],
+		'Age':[27, 24, 22, 32, 15],
+		'Address':['Delhi', 'Kanpur', 'Allahabad', 'Kannauj', 'Noida'],
+		'Qualification':['Msc', 'MA', 'MCA', 'Phd', '10th'] }
+
+df = pd.DataFrame(data)
+print(df)
+index = {'a', 'b', 'c', 'd', 'e'}    
+dfc = pd.DataFrame(data, index) 
+print("\n\n",dfc)
+
+
+9.	Given a dataframe, select first 2 rows and output them.
+import pandas as pd
+
+record = {
+"Name": ["Tom", "Jack", "Lucy",
+		"Bob", "Jerry", "Alice",
+		"Thomas", "Barbie"],
+	
+"Marks": [9, 19, 20,
+			17, 11, 18,
+			5, 8],
+	
+"Status": ["Fail", "Pass", "Pass",
+			"Pass","Pass", "Pass",
+			"Fail", "Fail"]}
+
+df = pd.DataFrame(record)
+print(df)
+df1 = df.head(2)
+print("\n\n",df1)
