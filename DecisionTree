@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import sklearn
+
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier,export_text
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_iris
+x,y=load_iris(return_X_y=True)
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=.20)
+y_test
+
+classifier=DecisionTreeClassifier()
+classifier.fit(x_train,y_train)
+
+y_pred=classifier.predict(x_test)
+y_pred
+
+ac=accuracy_score(y_test,y_pred)
+ac
+
+r=export_text(classifier)
+print(r)
+
+tree.plot_tree(classifier,fontsize=12)
