@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # data to plot
 n_groups = 5
-men_means = (22, 30, 33, 30, 26)
+men_means = (22, 30, 35, 35, 26)
 women_means = (25, 32, 30, 35, 29)
 
 # create plot
