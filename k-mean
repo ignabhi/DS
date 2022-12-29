@@ -1,0 +1,21 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import sklearn
+
+from sklearn.cluster import KMeans
+data=pd.read_csv('iris_csv.csv')
+data.head()
+
+x=data.iloc[:,:4]
+x
+
+classifier=KMeans(n_clusters=3)
+classifier.fit(x)
+y_pred=classifier.predict(x)
+
+y_pred
+
+centroid=classifier.cluster_centers_
+
+centroid
