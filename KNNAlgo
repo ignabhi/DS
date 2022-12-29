@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-path = "iris.data"
+path = "iris.csv"
 
 headernames = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
 
