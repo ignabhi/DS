@@ -4,9 +4,7 @@ import pandas as pd
 
 path = "iris.csv"
 
-headernames = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
-
-dataset = pd.read_csv(path, names = headernames)
+dataset = pd.read_csv(path)
 dataset.head()
 
 X = dataset.iloc[:, :-1].values
