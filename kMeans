@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import sklearn
+
+from sklearn.cluster import KMeans
+data=pd.read_csv('D:\Personal\Record\iris.csv')
+data.head()
+
+x=data.iloc[:,:4]
+x
+
+classifier=KMeans(n_clusters=3)
+classifier.fit(x)
+y_pred=classifier.predict(x)
+
+y_pred
+
+centroid=classifier.cluster_centers_
+
+centroid
+
+plt.scatter(data.iloc[:,0],data.iloc[:,1])
+plt.scatter(centroid[:,0],centroid[:,1],color='red')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
