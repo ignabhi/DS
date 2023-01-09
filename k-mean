@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import sklearn
 
 from sklearn.cluster import KMeans
-data=pd.read_csv('iris_csv.csv')
+data=pd.read_csv('iris.csv')
 data.head()
 
 x=data.iloc[:,:4]
